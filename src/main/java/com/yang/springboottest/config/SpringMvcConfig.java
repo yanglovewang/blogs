@@ -14,16 +14,20 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class SpringMvcConfig implements WebMvcConfigurer {
 
-    @Autowired
-    private MyInterceptor myInterceptor;
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/index.html").setViewName("login");
-        registry.addViewController("/file.html").setViewName("/file");
+        registry.addViewController("login").setViewName("/login");
+        registry.addViewController("index").setViewName("/index");
+        registry.addViewController("static").setViewName("classpath:/static/static");
     }
 
+    /**
+     * 释放静态资源
+     * @param registry
+     */
     @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(myInterceptor).addPathPatterns("/interceptor/myInterceptor");
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+        registry.addResourceHandler("/META-INF/resources").addResourceLocations("classpath:/META-INF/resources/webjars/**");
     }
 }

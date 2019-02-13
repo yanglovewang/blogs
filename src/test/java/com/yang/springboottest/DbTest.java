@@ -1,10 +1,6 @@
 package com.yang.springboottest;
 
-import com.github.pagehelper.Page;
-import com.github.pagehelper.PageHelper;
-import com.yang.springboottest.bean.User;
-import com.yang.springboottest.bean.UserCriteria;
-import com.yang.springboottest.mapper.UserMapper;
+import com.yang.springboottest.mapper.BlogMapper;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,14 +13,14 @@ import org.springframework.web.context.WebApplicationContext;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
-public class mybatisGenerator {
-
-    @Autowired
-    private UserMapper userMapper;
+public class DbTest {
 
     @Autowired
     private WebApplicationContext context;
     private MockMvc mvc;
+
+    @Autowired
+    private BlogMapper blogMapper;
 
     @Before
     public void setUp() throws Exception {
@@ -33,17 +29,7 @@ public class mybatisGenerator {
 
 
     @Test
-    public void boundTest() {
-        UserCriteria example = new UserCriteria();
-        UserCriteria.Criteria criteria = example.createCriteria();
-        example.setOrderByClause("id desc");
-        criteria.andIdBetween(666666, 666670);
-        Page<User> page = PageHelper.startPage(1, 2).doSelectPage(()->{
-            userMapper.selectByExample(example);
-        });
-
-        page.forEach(user -> {
-            System.out.println("user ==" + user);
-        });
+    public void dbTest() {
+        System.out.println( blogMapper.selectBlog(1));
     }
 }
