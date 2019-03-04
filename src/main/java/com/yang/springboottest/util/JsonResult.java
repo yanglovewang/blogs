@@ -7,8 +7,8 @@ import java.io.Serializable;
  */
 public class JsonResult{
 
-    /*public static final int SUCCESS = 0;
-    public static final int ERROR = 1;*/
+    public static final int SUCCESS = 0;
+    public static final int ERROR = 1;
 
     private int state = 200;
     /** 错误消息  */
@@ -19,7 +19,7 @@ public class JsonResult{
     public JsonResult() {
     }
 
-  /*  public JsonResult(String error){
+    public JsonResult(String error){
         state = ERROR;
         this.message = error;
     }
@@ -37,7 +37,7 @@ public class JsonResult{
     public JsonResult(int state, Throwable e) {
         this.state = state;
         this.message = e.getMessage();
-    }*/
+    }
 
     public int getState() {
         return state;

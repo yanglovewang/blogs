@@ -4,7 +4,130 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<script src="/static/layui-v2.4.5/layui/layui.all.js"></script>
+<link rel="stylesheet" href="/static/layui-v2.4.5/layui/css/layui.css"/>
+<link rel="stylesheet" href="/static/layui-v2.4.5/layui/css/layui.mobile.css"/>
+<style type="text/css">
+    body {
+        background-color: #e2e2e2;
+    }
+    .div-col-inner-md9 {
+        padding-right: 20px;
+    }
+
+</style>
 <body>
-<h1>index</h1>
+<div class="layui-container">
+    <!--导航-->
+    <ul class="layui-nav" lay-filter="">
+        <li class="layui-nav-item"><a href="">最新活动</a></li>
+        <li class="layui-nav-item layui-this"><a href="">产品</a></li>
+        <li class="layui-nav-item"><a href="">大数据</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">解决方案</a>
+            <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                <dd><a href="">移动模块</a></dd>
+                <dd><a href="">后台模版</a></dd>
+                <dd><a href="">电商平台</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">社区</a></li>
+    </ul>
+
+    <div style="margin-top: 20px;" class="layui-row">
+        <div class="layui-col-md9">
+            <div class="div-col-inner-md9">
+                <div class="layui-card">
+                    <div class="layui-card-header">博客1</div>
+                    <div class="layui-card-body">
+                        卡片式面板面板通常用于非白色背景色的主体内<br>
+                        从而映衬出边框投影
+                    </div>
+                </div>
+                <div class="layui-card">
+                    <div class="layui-card-header">博客2</div>
+                    <div class="layui-card-body">
+                        卡片式面板面板通常用于非白色背景色的主体内<br>
+                        从而映衬出边框投影
+                    </div>
+                </div>
+                <div class="layui-card">
+                    <div class="layui-card-header">博客3</div>
+                    <div class="layui-card-body">
+                        卡片式面板面板通常用于非白色背景色的主体内<br>
+                        从而映衬出边框投影
+                    </div>
+                </div>
+                <div class="layui-card">
+                    <div class="layui-card-header">博客4</div>
+                    <div class="layui-card-body">
+                        卡片式面板面板通常用于非白色背景色的主体内<br>
+                        从而映衬出边框投影
+                    </div>
+                </div>
+                <div class="layui-card">
+                    <div class="layui-card-header">博客5</div>
+                    <div class="layui-card-body">
+                        卡片式面板面板通常用于非白色背景色的主体内<br>
+                        从而映衬出边框投影
+                    </div>
+                </div>
+                <div class="layui-card">
+                    <div class="layui-card-header">博客6</div>
+                    <div class="layui-card-body">
+                        卡片式面板面板通常用于非白色背景色的主体内<br>
+                        从而映衬出边框投影
+                    </div>
+                </div>
+                <div class="layui-card">
+                    <div class="layui-card-header">博客7</div>
+                    <div class="layui-card-body">
+                        卡片式面板面板通常用于非白色背景色的主体内<br>
+                        从而映衬出边框投影
+                    </div>
+                </div>
+                <div class="layui-card">
+                    <div class="layui-card-header">博客8</div>
+                    <div class="layui-card-body">
+                        卡片式面板面板通常用于非白色背景色的主体内<br>
+                        从而映衬出边框投影
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="layui-col-md3">
+            <div class="layui-card">
+                <div class="layui-card-header">博客9</div>
+                <div class="layui-card-body">
+                    卡片式面板面板通常用于非白色背景色的主体内<br>
+                    从而映衬出边框投影
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">博客10</div>
+                <div class="layui-card-body">
+                    卡片式面板面板通常用于非白色背景色的主体内<br>
+                    从而映衬出边框投影
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header">博客11</div>
+                <div class="layui-card-body">
+                    卡片式面板面板通常用于非白色背景色的主体内<br>
+                    从而映衬出边框投影
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
+<script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function(){
+        var element = layui.element;
+
+        //…
+    });
+</script>

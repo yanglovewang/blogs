@@ -3,13 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
-<h1>login</h1>
+</head><!--static/layui-v2.4.5/layui/layui.all.js-->
+<script src="/static/layui-v2.4.5/layui/layui.all.js"></script>
+<link rel="stylesheet" href="/static/layui-v2.4.5/layui/css/layui.css"/>
+<link rel="stylesheet" href="/static/layui-v2.4.5/layui/css/layui.mobile.css"/>
+<style type="text/css">
+    body {
+        padding-top: 10%;
+        padding-bottom: 20%;
+        background-image: url("/static/img/back.jfif");
+        overflow: hidden;
 
-<form method="post">
-    userName <input type="text" name="username" placeholder="userName"/>
-    password: <input type="text" name="password" placeholder="password"/>
-    <input value="submit" type="submit"/>
-</form>
+    }
+
+    .center-div {
+        border: 1px solid;
+        padding-top: 70px;
+        padding-bottom: 60px;
+        background-color: rgba(158, 149, 149, 0.5);
+        border-radius: 21px;
+        padding-left: 20px;
+        padding-right: 118px;
+        margin-left: 148px;
+        margin-right: 148px;
+    }
+
+    .div-btn{
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-left: 100px;
+    }
+
+    .font-style {
+        size: 50px;
+        font-size: large;
+        font-style: inherit;
+        font-family: cursive;
+        color: antiquewhite;
+    }
+
+</style>
+<body>
+
+<div class="layui-container">
+    <div class="center-div">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label font-style">用户名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label font-style">密码</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </form>
+
+        <div class="div-btn">
+            <a href="#" id="id-a-login" class="layui-btn">登录</a>
+            <div style="margin-top: 20px;"><label class="font-style"><a>记住用户名密码？</a></label></div>
+            <div style="margin-top: 20px;"><label class="font-style"><a>注册？</a></label></div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
